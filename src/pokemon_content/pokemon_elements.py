@@ -1,4 +1,4 @@
-from mechanics.element import Element
+pfrom mechanics.element import Element
 
 
 class PokemonElements:
@@ -31,8 +31,12 @@ class PokemonElements:
         "Fighting",
         ascii_color="\033[31m",
     )
+    DEFAULT = Element(
+        "Default",
+        ascii_color="\033[31m",
+    )
 
-    ALL = [NEUTRAL, FIRE, WATER, GRASS, ELECTRIC, PSYCHIC, FIGHTING]
+    ALL = [NEUTRAL, FIRE, WATER, GRASS, ELECTRIC, PSYCHIC, FIGHTING, DEFAULT]
     _ELEMENTS_BY_NAME = {element.name.lower(): element for element in ALL}
 
     def get_element_by_name(name: str) -> Element:
